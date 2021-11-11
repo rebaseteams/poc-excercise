@@ -4,6 +4,7 @@
   "description": "endpoint to run python script on file an return the data",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./src -c ./src/.eslintrc.json --ext ts,tsx",
     "build": "tsc -p src",
     "start": "node dist"
   },
