@@ -39,6 +39,16 @@
                                 }
                             }
                         }
+                    },
+                    "400": {
+                        "description": "failure response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/convertfailure"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -67,6 +77,22 @@
                                 }
                             }
                         }
+                    },
+                    "400": {
+                        "description": "failure response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "error": {
+                                            "type": "string",
+                                            "description": "Error message."
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -83,6 +109,15 @@
                     "data": {
                         "type": "string",
                         "description": "Response value."
+                    }
+                }
+            },
+            "convertfailure": {
+                "type" : "object",
+                "properties": {
+                    "data": {
+                        "type": "string",
+                        "description": "Error message."
                     }
                 }
             }
