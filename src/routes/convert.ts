@@ -5,7 +5,10 @@ import uploadCsv from '../middleware/upload';
 
 const convertRoute = express.Router();
 
+// Route to convert the given file and return the converted files name
 convertRoute.post('/file', uploadCsv.single('file'), convertFile);
+
+// Route to download the file which was converted using previous route
 convertRoute.get('/file/:filename', getConvertedFile);
 
 export default convertRoute;
