@@ -7,3 +7,5 @@ app.listen(3000);
 app.use(cors());
 app.use(json());
 app.use('/', routes);
+
+export default app;

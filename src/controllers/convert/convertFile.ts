@@ -13,7 +13,7 @@ const pyrunner = async (csvPath : string, fileName : string, convertPath : strin
   });
 });
 
-const convert = async (req : Request, res : Response) => {
+const convertFile = async (req : Request, res : Response) => {
   const filepath = req.file?.path;
   const filename = req.file?.filename;
   console.log(req.file);
@@ -27,4 +27,4 @@ const convert = async (req : Request, res : Response) => {
   }
 };
 
-export default convert;
+export default convertFile;

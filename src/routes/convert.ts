@@ -1,11 +1,11 @@
 import express from 'express';
-import convert from '../controllers/convert';
-import converted from '../controllers/converted';
+import convertFile from '../controllers/convert/convertFile';
+import getConvertedFile from '../controllers/convert/getConvertedFile';
 import uploadCsv from '../middleware/upload';
 
 const convertRoute = express.Router();
 
-convertRoute.post('/file', uploadCsv.single('file'), convert);
-convertRoute.get('/file/:filename', converted);
+convertRoute.post('/file', uploadCsv.single('file'), convertFile);
+convertRoute.get('/file/:filename', getConvertedFile);
 
 export default convertRoute;
